@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+while read oldrev newrev ref
+do
+	# only checking out the master
+	if [[ $ref = refs/heads/master ]];
+	then
+		echo "Master ref received. Deploying master branch to the web..."
+		git --work-tree=your_working_directory --git-dir=your_bare_repository checkout -f
+	else
+		echo "Ref $ref successfully received. Doing nothing: only the master branch may be deployed on"
+	fi
+done
