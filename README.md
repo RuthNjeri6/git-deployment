@@ -9,8 +9,8 @@ Follow this steps to use the post-receive hook:
  chmod +x post-receive
  ```
  4. Test the hook  
- 		* Modify a file e.g a ```index.html``` file in your working directory.  
- 		* Add the file to the staging area and commit the changes  
+ * Modify a file e.g a ```index.html``` file in your working directory.  
+ * Add the file to the staging area and commit the changes  
  ```bash
  git add <filename>
  git commit -m "some message"
